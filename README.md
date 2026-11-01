@@ -31,7 +31,7 @@
 
 * **Framework:** Next.js 16 (App Router), React 19, TypeScript (Strict Mode).
 * **Styling & Aesthetics:** Vanilla Tailwind CSS with custom dark industrial palette (`#09090b`, `#27272a`, `#10b981`), Lucide React icons.
-* **AI Engine:** Google GenAI SDK (`@google/genai`) using `gemini-2.5-flash` for high-throughput, deterministic structured schema synthesis.
+* **AI Engine:** Google GenAI SDK (`@google/genai`) using `gemini-3.8-flash` for high-throughput, deterministic structured schema synthesis.
 * **Database & Auth:** Supabase (`@supabase/ssr` + `@supabase/supabase-js`) utilizing PostgreSQL with Row-Level Security (RLS) and atomic credit accounting RPCs.
 * **Billing & Idempotency:** Stripe & Lemon Squeezy webhook handlers with HMAC-SHA256 signature verification and replay protection.
 * **Execution Boundary:** Stateless Vercel Serverless Functions with zero local background service requirements.

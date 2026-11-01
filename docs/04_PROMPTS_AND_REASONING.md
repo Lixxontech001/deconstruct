@@ -2,7 +2,7 @@
 
 ## 1. Engine Configuration & Runtime Hyperparameters
 
-Lixxon Deconstruct routes all deconstruction operations through the official Google GenAI SDK (`@google/genai`) targeting `gemini-2.5-flash`. The serverless runtime isolates each module with explicit generation parameters to maximize deterministic code synthesis, eliminate hallucinated endpoints, and maintain strict schema validity.
+Lixxon Deconstruct routes all deconstruction operations through the official Google GenAI SDK (`@google/genai`) targeting `gemini-3.8-flash`. The serverless runtime isolates each module with explicit generation parameters to maximize deterministic code synthesis, eliminate hallucinated endpoints, and maintain strict schema validity.
 
 ```typescript
 // Shared SDK Client Configuration (src/lib/ai/gemini-client.ts)
@@ -13,7 +13,7 @@ export const ai = new GoogleGenAI({
 });
 
 export const DEFAULT_RUNTIME_CONFIG = {
-  model: 'gemini-2.5-flash',
+  model: 'gemini-3.8-flash',
   safetySettings: [
     { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_NONE' },
     { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_NONE' },
@@ -165,7 +165,7 @@ Response Schema (responseSchema)TypeScriptexport const SpyResponseSchema: Schema
   properties: {
     detectedModel: {
       type: Type.STRING,
-      description: "Identified or inferred base LLM (e.g., gemini-2.5-flash, gpt-4o, claude-3-5-sonnet).",
+      description: "Identified or inferred base LLM (e.g., gemini-3.8-flash, gpt-4o, claude-3-5-sonnet).",
     },
     systemInstructionTemplate: {
       type: Type.STRING,
@@ -223,7 +223,7 @@ export async function runDeconstructionPipeline<T>({
   temperature = 0.1,
 }: DeconstructionParams): Promise<T> {
   const response = await ai.models.generateContent({
-    model: 'gemini-2.5-flash',
+    model: 'gemini-3.8-flash',
     contents: userPrompt,
     config: {
       systemInstruction,

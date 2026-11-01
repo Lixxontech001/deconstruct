@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
     let artifact: SpyArtifact;
     if (process.env.MOCK_AI === "true" || process.env.NODE_ENV === "test") {
       artifact = {
-        detectedModel: "gemini-2.5-flash",
+        detectedModel: "gemini-3.8-flash",
         systemInstructionTemplate:
           "You are an assistant for {{company_name}} helping users with {{topic}}. Tone: {{tone}}.",
         injectedContextVariables: ["company_name", "topic", "tone"],

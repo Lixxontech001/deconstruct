@@ -68,7 +68,7 @@ This document is the state-machine and execution log for autonomous coding agent
   * Create `src/lib/ai/gemini-client.ts`.
   * Initialize `GoogleGenAI` instance using `process.env.GEMINI_API_KEY`.
   * Implement helper `generateDeconstruction({ systemInstruction, prompt, schema, temperature })`.
-  * Configure model target: `gemini-2.5-flash`.
+  * Configure model target: `gemini-3.8-flash`.
   * Ensure system prompts match specifications in `04_PROMPTS_AND_REASONING.md`.
   * *Verification:* Invoke `gemini-client.ts` with a mock prompt in a test script; assert structured response returns without network or SDK exceptions.
 

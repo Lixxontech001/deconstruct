@@ -26,7 +26,7 @@ export function Footer() {
             </div>
             <div className="hidden sm:flex items-center gap-1 text-zinc-400 font-mono">
               <Cpu className="h-3.5 w-3.5 text-zinc-400" />
-              <span>gemini-2.5-flash</span>
+              <span>gemini-3.8-flash</span>
             </div>
           </div>
         </div>

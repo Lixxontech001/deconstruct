@@ -5,7 +5,7 @@ export const ai = new GoogleGenAI({
 });
 
 export const DEFAULT_RUNTIME_CONFIG = {
-  model: "gemini-2.5-flash",
+  model: "gemini-3.8-flash",
   safetySettings: [
     { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
     { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
@@ -119,7 +119,7 @@ export const SpyResponseSchema: Schema = {
   properties: {
     detectedModel: {
       type: Type.STRING,
-      description: "Identified or inferred base LLM (e.g., gemini-2.5-flash, gpt-4o, claude-3-5-sonnet).",
+      description: "Identified or inferred base LLM (e.g., gemini-3.8-flash, gpt-4o, claude-3-5-sonnet).",
     },
     systemInstructionTemplate: {
       type: Type.STRING,
@@ -249,7 +249,7 @@ export async function generateDeconstruction<T>({
   temperature = 0.1,
   topP = 0.95,
   maxOutputTokens = 8192,
-  model = "gemini-2.5-flash",
+  model = "gemini-3.8-flash",
 }: DeconstructionParams): Promise<T> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {

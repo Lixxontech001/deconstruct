@@ -28,7 +28,7 @@ Lixxon Deconstruct is engineered as a zero-maintenance, cloud-native serverless 
                              ▼
                  [ Structured Output Stream ]
                  OpenAPI 3.0 / Tailwind TSX / Python
-Core TechnologiesFramework: Next.js (App Router), React, TypeScript (Strict Mode).Styling & UI: Tailwind CSS, Lucide React icons, @radix-ui primitives for accessible modals and tabs.Serverless Execution: Vercel Serverless Functions (nodejs runtime).AI & Reasoning Engine: @google/genai SDK using gemini-2.5-flash for high-throughput, low-latency code and schema synthesis.Database, Auth & Realtime: Supabase (@supabase/ssr + @supabase/supabase-js) utilizing PostgreSQL with Row-Level Security (RLS).Billing & Webhooks: Lemon Squeezy (Merchant of Record) or Stripe Checkout with HMAC signature validation.State & Data Fetching: React Hooks + SWR / Server Actions; client-side optimistic quota caching via localStorage.2. Directory & File Tree StructurePlaintextteardown-engine/
+Core TechnologiesFramework: Next.js (App Router), React, TypeScript (Strict Mode).Styling & UI: Tailwind CSS, Lucide React icons, @radix-ui primitives for accessible modals and tabs.Serverless Execution: Vercel Serverless Functions (nodejs runtime).AI & Reasoning Engine: @google/genai SDK using gemini-3.8-flash for high-throughput, low-latency code and schema synthesis.Database, Auth & Realtime: Supabase (@supabase/ssr + @supabase/supabase-js) utilizing PostgreSQL with Row-Level Security (RLS).Billing & Webhooks: Lemon Squeezy (Merchant of Record) or Stripe Checkout with HMAC signature validation.State & Data Fetching: React Hooks + SWR / Server Actions; client-side optimistic quota caching via localStorage.2. Directory & File Tree StructurePlaintextteardown-engine/
 ├── .env.example
 ├── .gitignore
 ├── next.config.ts
@@ -146,7 +146,7 @@ D. POST /api/deconstruct/spyDeconstructs multi-turn prompt chains and AI model r
 }
 Response:JSON{
   "success": true,
-  "detectedModel": "gemini-2.5-flash / gpt-4o",
+  "detectedModel": "gemini-3.8-flash / gpt-4o",
   "systemInstructions": "string",
   "parameterConfig": { "temperature": 0.2, "topP": 0.95 },
   "pipelineGraph": "mermaid / json schema",
